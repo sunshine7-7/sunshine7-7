@@ -1,0 +1,96 @@
+body,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.con {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.con {
+    max-width: 800px;
+}
+
+.box-1 {
+    background-color: #afafaf;
+}
+
+.box-1.active {
+    background-color: black;
+    color: white;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.popup.active {
+    display: flex;
+}
+
+.popup .content-box {
+    max-width: 600px;
+    border: 10px solid black;
+    background-color: white;
+}
+
+.popup .content-box>.head {
+    padding: 10px;
+}
+
+.popup .content-box>.head>.btn-close {
+    width: 30px;
+    height: 30px;
+    margin-left: auto;
+    position: relative;
+    cursor: pointer;
+}
+
+.popup .content-box>.head>.btn-close:hover {
+    transform: rotate(5deg);
+}
+
+.popup .content-box>.head>.btn-close::before,
+.popup .content-box>.head>.btn-close::after {
+    content: "1";
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 40%;
+    width: 20%;
+    height: 100%;
+    transform: rotate(45deg);
+}
+
+.popup .content-box>.head>.btn-close::after {
+    transform: rotate(-45deg);
+}
+
+.popup .content-box>.body {
+    padding: 20px;
+    max-height: calc(100vh - 100px);
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+html.popup-2-actived,
+html.popup-2-actived>body {
+    overflow: hidden;
+}
